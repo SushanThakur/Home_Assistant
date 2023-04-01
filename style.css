@@ -1,0 +1,295 @@
+:root {
+    /* VARIABLE DECLARATION FOR SHADOWS */
+    --text_shadow: black;
+    --box_shadow: black;
+    --shadow_for_tile_hover: orangered;
+    --shadow_for_button_hover: yellow;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #414040;
+}
+
+/* NAVIGATION BAR STYLING BEGINS */
+.nav_bar {
+    position: fixed;
+    z-index: 5;
+    width: 97%;
+    height: 20px;
+    left: 0;
+
+    background-color: #D1D1D1;
+    color: black;
+    font-family: 'Press Start 2p', 'Inconsolata';
+    font-size: 20px;
+    text-align: left;
+
+    padding: 5px;
+    padding-left: 12px;
+
+    text-shadow: 2px 2px 2px var(--text_shadow);
+    box-shadow: 0px 5px 10px var(--box_shadow);
+}
+
+.nav_bar_anchor {
+    text-decoration: none;
+    color: black;
+}
+
+.nav_bar_icons {
+    position: absolute;
+    display: inline;
+    right: 0;
+    top: 2px;
+    margin-right: 15px;
+}
+
+.nav_bar_open_png,
+.nav_bar_close_png {
+    height: 25px;
+    margin-right: 15px;
+    filter: brightness(0);
+}
+
+.nav_bar_open_png:hover,
+.nav_bar_close_png:hover {
+    cursor: pointer;
+}
+
+.nav_bar_close_png {
+    display: none;
+}
+
+/* NAVIGATION BAR STYLING ENDS */
+
+/* TILE DIV STYLING BEGINS */
+.tiles {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+    padding-bottom: 20px;
+
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.tiles_light,
+.tiles_socket,
+.tiles_router {
+    position: relative;
+    display: flex;
+    display: inline-block;
+
+    width: 380px;
+    height: 430px;
+    margin: 20px;
+
+    background: #212121b1;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid aqua;
+    border-radius: 20px;
+
+    box-shadow: 2px 2px 10px var(--box_shadow);
+}
+
+.tiles_light:hover,
+.tiles_socket:hover,
+.tiles_router:hover {
+    animation: 2s 1 0s ease-in-out tileHover;
+}
+
+@keyframes tileHover {
+    50% {
+        border: 2px solid aqua;
+        box-shadow: 0px 0px 20px var(--shadow_for_tile_hover);
+    }
+}
+
+/* TILE DIV STYLING ENDS */
+
+/* TILE CONTENTS STYLING BEGINS */
+.tiles_tile_header {
+    padding-top: 25px;
+
+    font-family: 'consolas', 'Inconsolata';
+    font-size: 25px;
+    font-weight: bold;
+
+    text-align: center;
+    color: #00FFFF;
+
+    text-shadow: 3px 3px 5px var(--text_shadow);
+}
+
+.tiles_tile_header_sub {
+    position: relative;
+    margin-left: 15px;
+    margin-top: 10px;
+
+    font-family: 'consolas', 'Inconsolata', 'Times New Roman';
+    font-size: 20px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-shadow: 3px 3px 5px var(--text_shadow);
+}
+
+.tiles_tile_header_sub_content {
+    position: relative;
+
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    font-family: 'consolas', 'Inconsolata', 'Times New Roman';
+    font-size: 20px;
+    color: whitesmoke;
+    text-shadow: 3px 3px 5px var(--text_shadow);
+}
+
+.tiles_tile_tweek_div {
+    position: absolute;
+    width: 100%;
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: translateX(-7px);
+
+}
+
+.tiles_tile_tweek_button {
+    position: relative;
+    height: 40px;
+    width: 170px;
+    background-color: grey;
+
+    margin-top: 30px;
+    margin-left: 15px;
+
+    border: none;
+    border-radius: 15px;
+
+    font: 'consolas', 'Inconsolata', 'Times New Roman';
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+
+    box-shadow: 3px 3px 10px var(--box_shadow);
+    text-shadow: 1px 1px 2px var(--text_shadow);
+}
+
+.tiles_tile_tweek_button:hover {
+    cursor: pointer;
+    animation: 1s 1 ease-in-out tweekButtonHover;
+}
+
+@keyframes tweekButtonHover {
+    50% {
+        border: 2px solid rgba(255, 255, 0, 0.879);
+        color: yellow;
+        box-shadow: 0px 0px 15px var(--shadow_for_button_hover);
+    }
+}
+
+.tiles_tile_detailed_view {
+    position: absolute;
+    bottom: 0;
+
+    width: 90%;
+    padding: 15px;
+
+    font-family: 'consolas', 'Inconsolata', 'Times New Roman';
+    font-size: 15px;
+    text-align: right;
+    color: whitesmoke;
+
+    text-shadow: 1px 1px 3px var(--text_shadow);
+}
+
+.tiles_tile_detailed_view_anchor {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.tiles_tile_detailed_view_anchor:hover {
+    text-decoration: none;
+    font-weight: 900;
+}
+
+/* TILE CONTENTS STYLING ENDS */
+
+/* LIGHT SECTION BEGINS */
+.light_on_png,
+.light_off_png {
+    position: absolute;
+    top: 2px;
+    z-index: -2;
+
+    height: 300px;
+    left: 25%;
+
+    transform: rotateX(180deg);
+    filter: blur(5px);
+}
+
+.light_on_png {
+    display: none;
+    left: 1%;
+    height: 380px;
+}
+
+/*LIGHT SECTION ENDS */
+
+/* POWER SOCKET SECTION BEGINS */
+.socket_on_png,
+.socket_off_png {
+    position: absolute;
+    z-index: -2;
+
+    width: 98%;
+    top: 20%;
+    left: 1%;
+
+    filter: blur(3px);
+}
+
+.socket_on_png {
+    display: none;
+}
+
+/* POWER SOCKET SECTION ENDS */
+
+/* ROUTER SECTION BEGINS */
+.router_up_png,
+.router_down_png {
+    position: absolute;
+    z-index: -2;
+
+    top: 120px;
+    left: 75px;
+
+    width: 250px;
+
+    filter: blur(3px);
+}
+
+.router_down_png {
+    display: none;
+}
+
+/* ROUTER SECTION ENDS */

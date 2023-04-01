@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME ASSISTANT</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="nav_bar">
+        <a href="index.html" class="nav_bar_anchor">HOME ASSISTANT</a>
+        <div class="nav_bar_icons">
+            <img src="./asset/open.png" class="nav_bar_open_png" alt="open options menu">
+            <img src="./asset/close.png" class="nav_bar_close_png" alt="close options menu">
+        </div>
+    </div>
+
+    <div class="tiles">
+
+        <!--LIGHT SECTION BEGINS-->
+        <div class="tiles_light">
+
+            <img src="./asset/lightBulbON.png" class="light_on_png" alt="light on png">
+            <img src="./asset/lightBulbOFF.png" class="light_off_png" alt="light off png">
+
+            <p class="tiles_tile_header">LIGHT STATUS:<span id="tiles_light_status"> (OFF)</span></p>
+
+            <p class="tiles_tile_header_sub">Today:</p>
+
+            <p class="tiles_tile_header_sub_content">
+                Total Usage:     <span id="bulbUsageToday">5 hrs.</span><br>
+                Units consumed:  <span id="bulbUnitToady">0.02</span>
+            </p>
+
+            <p class="tiles_tile_header_sub">Monthly:</p>
+
+            <p class="tiles_tile_header_sub_content">
+                Total Usage: <span class="usage" id="bulbUsageMonthly">150 hrs.</span> <br>
+                Units consumed: <span class="usage" id="bulbUnitMonthly"> 0.6 </span>  <br>
+            </p>
+
+            <p class="tiles_tile_header_sub">Tweak Setting:</p>
+
+            <div class="tiles_tile_tweek_div">
+                <button class="tiles_tile_tweek_button" id="bulbON">ON</button>
+                <button class="tiles_tile_tweek_button" id="bulbOFF">OFF</button>
+            </div>
+
+            <p class="tiles_tile_detailed_view">
+                <a href="#" class="tiles_tile_detailed_view_anchor">Open Detailed View >></a>
+            </p>
+
+        </div>
+        <!--LIGHT SECTION ENDS-->
+
+        <!--POWER SOCKET SECTION BEGINS-->
+
+        <div class="tiles_socket">
+
+            <img src="./asset/power_socket_connected.png" class="socket_on_png" alt="socket on png">
+            <img src="./asset/power_socket_disconnected.png" class="socket_off_png" alt="socket off png">
+
+            <p class="tiles_tile_header">POWER SOCKET STATUS: <span id="powerSocketStatus">(OFF)</span></p>
+
+            <p class="tiles_tile_header_sub">Today:</p>
+
+            <p class="tiles_tile_header_sub_content">
+                Total Usage:     <span id="PowerSocketUsageToday">5 hrs.</span><br>
+                Units consumed:  <span id="PowerSocketUnitToady">0.02</span>
+            </p>
+
+            <p class="tiles_tile_header_sub">Monthly:</p>
+
+            <p class="tiles_tile_header_sub_content">
+                Total Usage: <span class="usage" id="PowerSocketUsageMonthly">150 hrs.</span> <br>
+                Units consumed: <span class="usage" id="PowerSocketUnitMonthly"> 0.6 </span>  <br>
+            </p>
+
+            <p class="tiles_tile_header_sub">Tweak Setting:</p>
+
+            <div class="tiles_tile_tweek_div">
+                <button class="tiles_tile_tweek_button" id="PowerSocketON">ON</button>
+                <button class="tiles_tile_tweek_button" id="PowerSocketOFF">OFF</button>
+            </div>
+
+            <p class="tiles_tile_detailed_view">
+                <a href="#" class="tiles_tile_detailed_view_anchor">Open Detailed View >></a>
+            </p>
+
+        </div>
+        <!--POWER SOCKET SECTION ENDS-->
+
+        <!--ROUTER SECTION BEGINS-->
+
+        <div class="tiles_router">
+
+            <img src="./asset/router_up.png" class="router_up_png" alt="router up png">
+            <img src="./asset/router_down.png" class="router_down_png" alt="router down png">
+
+            <p class="tiles_tile_header">ROUTER DETAILS: <span id="router_status">(UP)</span></p>
+            <p class="tiles_tile_header_sub">UP-TIME:</p>
+            
+            <p class="tiles_tile_header_sub_content" id="router_up_time_sec">01D&nbsp; 00H&nbsp; 00M&nbsp; 00S</p>
+
+
+            <p class="tiles_tile_header_sub">SIGNAL STRENGTH:</p>
+            <p class="tiles_tile_header_sub_content" id="signal_strength">-24 dbm</p>
+
+            <p class="tiles_tile_header_sub">LAST RESTARTED ON: </p>
+            <p class="tiles_tile_header_sub_content" id="last_restart_date">2077-12-08 at 10:07pm</p>
+
+            <div class="tiles_tile_tweek_div">
+                <button class="tiles_tile_tweek_button" id="RouterRestart">RESTART</button>
+            </div>
+
+            <p class="tiles_tile_detailed_view">
+                <a href="#" class="tiles_tile_detailed_view_anchor">Open Detailed View >></a>
+            </p>
+
+        </div>
+
+        <!--ROUTER SECTION ENDS-->
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
