@@ -1,0 +1,4 @@
+.tiles_tile_tweek_button:hover {
+    cursor: pointer;
+    animation: 1s 1 ease-in-out tweekButtonHover;
+}

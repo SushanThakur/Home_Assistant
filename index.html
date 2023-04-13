@@ -23,12 +23,12 @@
     <div class="tiles">
 
         <!--LIGHT SECTION BEGINS-->
-        <div class="tiles_light">
+        <div class="tiles_light" id="tiles_light_id">
 
-            <img src="./asset/lightBulbON.png" class="light_on_png" alt="light on png">
-            <img src="./asset/lightBulbOFF.png" class="light_off_png" alt="light off png">
+            <img src="./asset/lightBulbON.png" class="light_on_png" id="light_on_png_id" alt="light on png">
+            <img src="./asset/lightBulbOFF.png" class="light_off_png" id="light_off_png_id" alt="light off png">
 
-            <p class="tiles_tile_header">LIGHT STATUS:<span id="tiles_light_status"> (OFF)</span></p>
+            <p class="tiles_tile_header">LIGHT STATUS:<span class="status" id="tilesLightStatus"><!--ON/OFF--></span></p>
 
             <p class="tiles_tile_header_sub">Today:</p>
 
@@ -65,7 +65,7 @@
             <img src="./asset/power_socket_connected.png" class="socket_on_png" alt="socket on png">
             <img src="./asset/power_socket_disconnected.png" class="socket_off_png" alt="socket off png">
 
-            <p class="tiles_tile_header">POWER SOCKET STATUS: <span id="powerSocketStatus">(OFF)</span></p>
+            <p class="tiles_tile_header">POWER SOCKET STATUS: <span  class="status" id="powerSocketStatus"><!--ON/OFF--></span></p>
 
             <p class="tiles_tile_header_sub">Today:</p>
 
@@ -102,7 +102,7 @@
             <img src="./asset/router_up.png" class="router_up_png" alt="router up png">
             <img src="./asset/router_down.png" class="router_down_png" alt="router down png">
 
-            <p class="tiles_tile_header">ROUTER DETAILS: <span id="router_status">(UP)</span></p>
+            <p class="tiles_tile_header">ROUTER STATUS: <span class="status" id="router_status"><!--UP/DOWN--></span></p>
             <p class="tiles_tile_header_sub">UP-TIME:</p>
             
             <p class="tiles_tile_header_sub_content" id="router_up_time_sec">01D&nbsp; 00H&nbsp; 00M&nbsp; 00S</p>
