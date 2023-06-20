@@ -274,7 +274,7 @@ body {
 .socket_off_png {
     position: absolute;
     z-index: -2;
-
+    display: none;
     width: 98%;
     top: 20%;
     left: 1%;
@@ -282,8 +282,9 @@ body {
     filter: blur(3px);
 }
 
-.socket_on_png {
-    display: none;
+.socket_on_png.vis,
+.socket_off_png.vis {
+    display: flex;
 }
 
 /* POWER SOCKET SECTION ENDS */
