@@ -1,5 +1,5 @@
 # Home_Assistant
 
-A digital assistant to control smart components throughout our homes.
+A webpage that allows user to control smart devices (devices using esp32) from anywhere in the world.
 
-This project is at it's very initial stage and may not work.
+This is only the frontend part as of now. Backend will be added once I feel motivated enough to work on it. 
